@@ -37,10 +37,10 @@ data class University(
         .groupBy{it.age}
         .mapKeys{
         when (it.key) {
-            18 -> 1
-            19 -> 2
-            20 -> 3
-            21 -> 4
+            17 -> 1
+            18 -> 2
+            19 -> 3
+            20 -> 4
             else -> throw StudentTooYoungException("Age discrepancy")
         }
         }
@@ -57,14 +57,14 @@ enum class StudyProgram(val title: String){
 typealias StudentsListener = (Student) -> Unit
 
 val students = mutableListOf(
-    Student("Vasya",2001,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
-    Student("Habib",2002,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 5)),
-    Student("Hasbik",2001,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 5, StudyProgram.PP withGrade 5)),
+    Student("Vasya",2002,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
+    Student("Habib",2003,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 5)),
+    Student("Hasbik",2004,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 5, StudyProgram.PP withGrade 5)),
     //Student("Abdurozik",2000,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 5, StudyProgram.PP withGrade 5)),
-    Student("Ramzan",2002,listOf(StudyProgram.FIM withGrade 3, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
-    Student("Erema",2003,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 5)),
-    Student("Ilya",2004,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
-    Student("Daniel",2003,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 4))
+    Student("Ramzan",2003,listOf(StudyProgram.FIM withGrade 3, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
+    Student("Erema",2004,listOf(StudyProgram.FIM withGrade 5, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 5)),
+    Student("Ilya",2005,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 3)),
+    Student("Daniel",2004,listOf(StudyProgram.FIM withGrade 4, StudyProgram.OS withGrade 4, StudyProgram.PP withGrade 4))
 )
 
 
